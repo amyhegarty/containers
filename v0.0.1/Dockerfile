@@ -231,5 +231,9 @@ RUN rm -vfR /var/lib/apt/lists/* \
 
 ENV HCPPIPEDIR="/scripts/HCPpipelines/"
 
+#############################################
+# Patch issue with tr command
+RUN ln -s /usr/bin/tr /bin/tr 
+
 # interactive command...
 # /scripts/HCPpipelines/ICAFIX/hcp_fix /inputs/MNINonLinear/Results/task-rest3_bold/task-rest3_bold.nii.gz 2000 FALSE
